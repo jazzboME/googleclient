@@ -6,10 +6,12 @@ usage:
 ```golang
 
 import (
+  "golang.org/x/net/context"
   "github.com/jazzboME/googleclient"
 )
 
-client := googleclient.GetClient(scope, credentialsFileName)
+ctx := context.Background()
+client := googleclient.GetClient(ctx, scope, credentialsFileName)
 ```
 
 Where `scope` is the intended scopes required by your application, and the `credentialsFileName` is the name of the filename that will be placed in the `~/credentials` directory. Multiple scopes can be indicated by separating each scope with a space. The `credentialsFileName` should be unique for each application.
