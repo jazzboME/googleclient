@@ -21,8 +21,7 @@ import (
 
 // GetClient uses a Context and Config to retrieve a Token
 // then generate a Client. It returns the generated Client.
-func GetClient(scope string, file string) *http.Client {
-	ctx := context.Background()
+func GetClient(ctx context.Context, scope string, file string) *http.Client  {
 
 	b, err := ioutil.ReadFile("client_secret.json")
 	if err != nil {
