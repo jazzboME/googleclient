@@ -4,6 +4,11 @@ Go library to attain google api clients for quick cli tools
 usage:
 
 ```golang
+
+import (
+  "github.com/jazzboME/googleclient"
+)
+
 client := googleclient.GetClient(scope, credentialsFileName)
 ```
 
